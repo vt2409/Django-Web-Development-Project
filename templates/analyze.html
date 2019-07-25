@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> Analying Your Text
+</title>
+<style>
+.analyzing {
+	background-color: #fff;
+	margin: auto;
+	padding: auto;
+}
+.heading {
+	text-align: center;
+	font-family: cursive;
+
+}
+.actions {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 20px;
+	font-family: courier
+	
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body style="background-color:orange">
+	<nav class="navbar navbar-light bg-dark">
+  <a class="navbar-brand" style="font-family:cursive; color:white; ">Pykashtextutil.com</a>
+  <form class="form-inline"> 
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav> 
+	<div class="analyzing">
+
+	<h1 class="heading">
+	Your Analyze Text - {{ purpose }} Sucessfully Done !  </h1>
+ 	<p>
+ 		<pre class="actions"> {{ analyzed_text }} </pre> </p>
+
+
+</div>
+
+</body>
+
+</html>

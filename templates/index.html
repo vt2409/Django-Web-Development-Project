@@ -1,0 +1,132 @@
+<html>
+<head>
+<title> website 
+</title>
+<style> 
+
+.comment {
+ 
+height: 260px;
+width: 1050px;
+position: absolute;
+left: 10%;
+top:18%;
+border: 1px solid white;
+box-shadow: 2px 5px 10px white;
+background-color: #fff;
+font-family: cursive;
+
+}
+.textutil {
+	font-family: cursive;
+	text-align: center;
+	border: 1px solid transparent;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+.textutil:hover {
+	color: red;
+	font: 28px;
+}
+
+.box {
+	margin: 0px;
+		max-width: 1200px;
+		background-color: tan;
+}
+.para {
+	font-size: 22px;
+	position: absolute;
+	left: 10%;
+	top:12%;
+	font-weight: bolder;
+}
+.grid {
+	position: absolute;
+	top:60%;
+	left: 10%;
+
+}
+.wanna{
+	font-size: 20px;
+	font-weight: bolder;
+}
+.btn {
+	border: 1px solid transparent;
+	padding: 10px 25px;
+	font-family: cursive;
+}
+.btn:hover {
+ background-color: black;
+color:white;
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body class="box">  <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="margin-left:160px;">
+  <a class="navbar-brand" href="#" style="font-family:cursive; color:white; ">pykashtextutil.com</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>
+	 <p class="para"> Enter The comment : </p>
+	 <form action='/analyze' method='post'>  {% csrf_token %}
+		<textarea name='text' class="comment"> </textarea></br>
+		<div name="action">
+		    <nav class="grid">
+            <p class="wanna"> Which Action Do You Wanna Perform(CHOOSE ONLY ONE ACTION) ?</p>
+            <div class="custom-control custom-switch">
+            <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1"> REMOVE PUNCTUTATIONS</label>
+            </div> <br>
+            <div class="custom-control custom-switch">
+            <input type="checkbox" name="fullcaps" class="custom-control-input" id="customSwitch2">
+            <label class="custom-control-label" for="customSwitch2">  UPPERCASE </label>
+            </div></br>
+            <div class="custom-control custom-switch">
+            <input type="checkbox" name="newlineremover" class="custom-control-input" id="customSwitch3">
+            <label class="custom-control-label" for="customSwitch3"> NEW LINE REMOVER  </label>
+            </div></br>
+            <div class="custom-control custom-switch">
+            <input type="checkbox"  name="extraspaceremover" class="custom-control-input" id="customSwitch4">
+            <label class="custom-control-label" for="customSwitch4">EXTRA SPACE REMOVER  </label>
+            </div></br>  
+        
+		    <button type="submit" class="btn"> Analyzer text </button>
+		   </nav>
+        </div>
+	</div>
+</body>
+</html>
